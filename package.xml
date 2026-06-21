@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>mecha</name>
+  <name>mecha_lerobot</name>
   <version>0.0.0</version>
   <description>SO101 LeRobot teleoperation bridge with RViz2 visualization</description>
   <maintainer email="user@example.com">user</maintainer>

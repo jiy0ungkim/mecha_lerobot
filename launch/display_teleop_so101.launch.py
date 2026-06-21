@@ -18,13 +18,13 @@ def generate_launch_description():
     degrees_to_radians = LaunchConfiguration("degrees_to_radians")
 
     urdf_file = PathJoinSubstitution([
-        FindPackageShare("mecha"),
+        FindPackageShare("mecha_lerobot"),
         "urdf",
         "so101_new_calib.urdf",
     ])
 
     rviz_config = PathJoinSubstitution([
-        FindPackageShare("mecha"),
+        FindPackageShare("mecha_lerobot"),
         "rviz",
         "so101.rviz",
     ])
@@ -35,7 +35,7 @@ def generate_launch_description():
     )
 
     conda_python = "/home/kjy/anaconda3/envs/lerobot/bin/python3"
-    teleop_script = "/home/kjy/ros2_ws/src/mecha/mecha/so101_teleop.py"
+    teleop_script = "/home/kjy/ros2_ws/src/mecha_lerobot/mecha_lerobot/so101_teleop_udp.py"
 
     common_teleop_cmd = [
         conda_python,
@@ -105,7 +105,7 @@ def generate_launch_description():
         ),
 
         Node(
-            package="mecha",
+            package="mecha_lerobot",
             executable="so101_rviz_node",
             name="so101_rviz_node",
             parameters=[

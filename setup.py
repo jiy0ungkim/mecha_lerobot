@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 import os
 from glob import glob
 
-package_name = "mecha"
+package_name = "mecha_lerobot"
 
 setup(
     name=package_name,
@@ -33,7 +33,8 @@ setup(
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [
-            "so101_rviz_node = mecha.so101_rviz_node:main",
+            "so101_rviz_node = mecha_lerobot.so101_rviz_node:main",
+            "so101_dual_rviz_node = mecha_lerobot.so101_dual_rviz_node:main"
         ],
     },
 )
